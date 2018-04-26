@@ -1,0 +1,29 @@
+{
+  "name": "代理服务端",
+  "id": "grafana-server-datasource",
+  "type": "datasource",
+  "metrics": true,
+  "annotations": false,
+  "info": {
+    "description": "代理服务端作为数据源",
+    "author": {
+      "name": "liuchunhui",
+      "url": "https://grafana.com"
+    },
+    "logos": {
+      "small": "img/server-logo.png",
+      "large": "img/server-logo.png"
+    },
+    "links": [
+      {"name": "Github", "url": ""},
+      {"name": "MIT License", "url": ""}
+    ],
+    "version": "1.0.0",
+    "updated": "2018-04-23"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "3.x.x",
+    "plugins": []
+  }
+}

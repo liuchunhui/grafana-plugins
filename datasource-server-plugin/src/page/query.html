@@ -1,0 +1,20 @@
+<query-editor-row query-ctrl="ctrl" has-text-edit-mode="true">
+    <div class="gf-form"
+         ng-if="!ctrl.target.rawQuery"
+         ng-repeat="key in ctrl.keys">
+        <span class="gf-form-label width-7">
+            {{ctrl.text[key]}}
+        </span>
+        <select class="gf-form-input width-25"
+                ng-model="ctrl.target[key]"
+                ng-change="ctrl.onChangeInternal()">
+            <option ng-repeat="option in ctrl.options[key]"
+                    value="{{option.name}}">
+                {{option.desc}}
+            </option>
+        </select>
+    </div>
+    <div ng-if="ctrl.target.rawQuery">
+        <textarea class="gf-form-input" rows="5" spellcheck="false" ng-blur="ctrl.onChangeInternal()" />
+    </div>
+</query-editor-row>
